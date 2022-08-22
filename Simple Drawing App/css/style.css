@@ -1,0 +1,143 @@
+* {
+  font-family: montserrat;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+canvas {
+  width: 60%;
+  height: 30rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #000;
+  margin-top: 7%;
+  margin-bottom: 1%;
+  cursor: url('/img/cursor.png'), crosshair;
+}
+
+@media (max-width: 900px) {
+  canvas {
+    width: 80%;
+  }
+
+  ul li {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  ul .selected {
+    width: 26px !important;
+    height: 26px !important;
+    border: 7px solid #fff; 
+  }
+
+  #colorSelect {
+    max-width: 15rem !important;
+  }
+
+  #revealColorSelect, 
+  #addNewColor {
+    font-size: .9rem !important;
+  }
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+ul li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px #111;
+  cursor: pointer;
+}
+
+ul .selected {
+  width: 36px;
+  height: 36px;
+  border: 7px solid #fff; 
+}
+
+ul .red {
+  background-color: red;
+}
+
+ul .blue {
+  background-color: blue;
+}
+
+
+ul .yellow {
+  background-color: yellow;
+}
+
+#revealColorSelect {
+  background-color: green;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+
+#colorSelect {
+  display: none;
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 20rem;
+  border-radius: .5rem;
+  background-color: #fff;
+}
+
+#colorSelect:after {
+  top: -20.6rem;
+  left: -50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: relative;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+#newColor {
+  width: 90%;
+  height: 6rem;
+  display: inline-block;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  background-color: black;
+}
+
+#colorSelect .sliders {
+  padding: 1rem 0 1rem 0;
+}
+
+#colorSelect label {
+  padding-right: 1rem;
+}
+
+#addNewColor {
+  background-color: green;
+  color: #fff;
+  width: 100%;
+  height: 4rem;
+  border: none;
+  font-size: 1.3rem;
+}
